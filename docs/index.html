@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Hi {
+        color: rgb(247, 181, 192, 1);
+        top: 25%;
+        left: 9%;
+        font-size: 35px;
+        display: none;
+    }
+    
+    .Hi.fix {
+        position: absolute;
+        display: block;
+        animation: anime infinite 2s;
+    }
+    
+    @keyframes anime {
+        50% {
+            color: palevioletred;
+        }
+        100% {
+            color: rgb(247, 181, 192, 1);
+        }
+    }
+</style>
+
+<body>
+    <H1 class="Hi">Làm người yêu tớ nha</H1>
+    <Button class="butt">Nhấn đi:-:</Button>
+</body>
+
+<script>
+    const hien = document.querySelector(".Hi")
+    const hien2 = document.querySelector(".butt")
+    hien2.addEventListener('click', function() {
+        hien.classList.add('fix')
+    })
+</script>
+
+</html>
