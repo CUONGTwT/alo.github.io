@@ -8,6 +8,8 @@
     <title>Tặng cậu:))</title>
 </head>
 <style>
+    .mp33 {}
+    
     .Hi {
         color: rgb(247, 181, 192, 1);
         top: 25%;
@@ -37,17 +39,20 @@
 </style>
 
 <body>
-    <img src="https://blogphanmem.vn/anh-anime-nu-sieu-dang-yeu/" style="position:absolute ;bottom: 0;" alt="">
-    <H1 class="Hi">Làm người yêu tớ nha</H1>
+
+    <H1 class="Hi" onclick="this">Làm người yêu tớ nha</H1>
     <Button class="butt">Nhấn đi:-:</Button>
+    <audio class="mp33" src="bby.mp3" type="audio/mp3" style="position: absolute; bottom: 0;"></audio>
 </body>
 
 <script>
+    const mp3 = document.querySelector(".mp33")
     const hien = document.querySelector(".Hi")
     const hien2 = document.querySelector(".butt")
     hien2.addEventListener('click', function() {
         hien.classList.add('fix')
         hien2.classList.add('f')
+        mp3.play()
     })
 </script>
 
