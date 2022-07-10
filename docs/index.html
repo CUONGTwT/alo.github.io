@@ -36,16 +36,143 @@
             color: rgb(247, 181, 192, 1);
         }
     }
+    
+    .chop {
+        position: absolute;
+        left: 117px;
+        width: 150px;
+        height: 60px;
+        background-image: linear-gradient(-45deg, rgb(223, 137, 137, 0.3), rgb(0, 98, 105, 0.3));
+        animation: anime2 1s infinite;
+        margin-top: 60px;
+    }
+    
+    .backgr {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(-45deg, rgb(223, 137, 137, 0.3), rgb(0, 98, 105, 0.3), rgb(116, 30, 52, 0.3), rgb(218, 207, 57, 0.3));
+        animation: anime1 1s infinite;
+        margin-top: 105px;
+    }
+    
+    .backgr img {
+        mix-blend-mode: saturation;
+        position: absolute;
+        width: 140px;
+        top: 45%;
+        /* left: 100px; */
+        animation: anime3 1s infinite;
+        margin-top: 20px;
+    }
+    
+    @keyframes anime1 {
+        50% {
+            margin-top: 30px;
+        }
+        100% {
+            margin-top: 105px;
+        }
+    }
+    
+    @keyframes anime2 {
+        50% {
+            margin-top: -4px;
+        }
+        100% {
+            margin-top: 60px;
+        }
+    }
+    
+    @keyframes anime3 {
+        50% {
+            margin-top: 0px;
+            width: 220px;
+        }
+        100% {
+            margin-top: 20px;
+            width: 140px;
+        }
+    }
+    
+    .tro {
+        position: absolute;
+        top: 80%;
+        font-size: 40px;
+        left: 25%;
+        opacity: 0;
+    }
+    
+    .tro.fi2 {
+        opacity: 1;
+    }
+    
+    .animation {
+        display: none;
+    }
+    
+    .animation.fi1 {
+        display: block;
+    }
+    
+    .co {
+        position: absolute;
+        z-index: 1;
+    }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
 
     <H1 class="Hi" onclick="this">Làm người yêu tớ nha</H1>
+    <!-- <h1 class="hi2">Tớ thích cậu lắm đấy </h1> -->
     <Button class="butt">Nhấn đi:-:</Button>
     <audio class="mp33" src="bby.mp3" type="audio/mp3" style="position: absolute; bottom: 0;"></audio>
+    <div class="animation">
+        <button class="co" style="background-color: rgba(117, 34, 194, 0.4);left: 40px; height: 40px; width: 80px;position: absolute;top: 38%; font-size: 20px;border: 2px solid rgb(204, 99, 134);">Ờm_-_</button>
+        <button style="background-color: rgba(117, 34, 194, 0.4);left: 60%; height: 40px; width: 80px;position: absolute;top: 38%; font-size: 20px;border: 2px solid rgb(204, 99, 134);">Không</button>
+        <div class="tro">Ờm làm tró:))</div>
+        <div class="chop"></div>
+        <div class="backgr">
+            <img src="/set.png" alt="">
+        </div>
+    </div>
 </body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
+    const co = document.querySelector(".co")
+    const tro = document.querySelector(".tro")
+    const ani = document.querySelector(".animation")
     const mp3 = document.querySelector(".mp33")
     const hien = document.querySelector(".Hi")
     const hien2 = document.querySelector(".butt")
@@ -53,6 +180,10 @@
         hien.classList.add('fix')
         hien2.classList.add('f')
         mp3.play()
+        ani.classList.add('fi1')
+    })
+    co.addEventListener('click', function() {
+        tro.classList.add('fi2')
     })
 </script>
 
