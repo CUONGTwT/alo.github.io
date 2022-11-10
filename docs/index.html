@@ -139,6 +139,11 @@
         position: absolute;
         z-index: 1;
     }
+
+    .khong {
+        position: absolute;
+        z-index: 1;
+    }
 </style>
 
 
@@ -207,7 +212,7 @@
         mp3.play()
         ani.classList.add('fi1')
     })
-    co.addEventListener('click', function () {
+    co.addEventListener('click', () => {
         tro.classList.add('fi2')
     })
     khoo.addEventListener('click', () => {
